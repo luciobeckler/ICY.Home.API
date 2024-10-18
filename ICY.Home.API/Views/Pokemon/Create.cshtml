@@ -1,0 +1,53 @@
+﻿@model ICY.Home.API.Models.Pokemons
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Pokemons</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="levelEvolucao" class="control-label"></label>
+                <input asp-for="levelEvolucao" class="form-control" />
+                <span asp-validation-for="levelEvolucao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="condicaoEvolucao" class="control-label"></label>
+                <input asp-for="condicaoEvolucao" class="form-control" />
+                <span asp-validation-for="condicaoEvolucao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idPokemoEvolucao" class="control-label"></label>
+                <input asp-for="idPokemoEvolucao" class="form-control" />
+                <span asp-validation-for="idPokemoEvolucao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tiposSerializados" class="control-label"></label>
+                <input asp-for="tiposSerializados" class="form-control" />
+                <span asp-validation-for="tiposSerializados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

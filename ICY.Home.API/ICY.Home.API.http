@@ -1,0 +1,6 @@
+@ICY.Home.API_HostAddress = http://localhost:5053
+
+GET {{ICY.Home.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
